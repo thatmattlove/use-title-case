@@ -1,5 +1,5 @@
 {
-  "name": "react-title-case",
+  "name": "use-title-case",
   "version": "0.0.1",
   "description": "A React hook to properly capitalize titles using Vercel's title library",
   "types": "dist/index.d.ts",
@@ -8,12 +8,12 @@
   "module": "esm/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/checktheroads/react-title-case"
+    "url": "https://github.com/checktheroads/use-title-case"
   },
   "bugs": {
-    "url": "https://github.com/checktheroads/react-title-case/issues"
+    "url": "https://github.com/checktheroads/use-title-case/issues"
   },
-  "homepage": "https://github.com/checktheroads/react-title-case#readme",
+  "homepage": "https://github.com/checktheroads/use-title-case#readme",
   "files": [
     "dist/",
     "esm/"

@@ -1,11 +1,11 @@
 <div align="center">
     <br/>
-    <h3>React Title Case</h3>
+    <h3><code>useTitleCase()</code></h3>
     <br/>
 
-[![Tests](https://img.shields.io/github/workflow/status/checktheroads/react-title-case/Tests?label=Tests&style=for-the-badge)](https://github.com/checktheroads/react-title-case/actions?query=workflow%3A%Tests%22)
+[![Tests](https://img.shields.io/github/workflow/status/checktheroads/use-title-case/Tests?label=Tests&style=for-the-badge)](https://github.com/checktheroads/use-title-case/actions?query=workflow%3A%Tests%22)
 
-[![npm](https://img.shields.io/npm/v/react-title-case?style=for-the-badge)](https://npmjs.com/package/react-title-case)
+[![npm](https://img.shields.io/npm/v/use-title-case?style=for-the-badge)](https://npmjs.com/package/use-title-case)
 
 </div>
 
@@ -15,16 +15,16 @@ React Title Case is a simple React Hook that provides a callback for [Vercel's t
 
 ```bash
 # Using yarn
-yarn add react-title-case
+yarn add use-title-case
 
 # Using npm
-npm install react-title-case
+npm install use-title-case
 ```
 
 ## Usage
 
 ```js
-import { useTitleCase } from 'react-title-case';
+import { useTitleCase } from 'use-title-case';
 
 export const YourSnazzyComponent = () => {
   const title = useTitleCase();
@@ -45,7 +45,7 @@ React Title Case comes with some (primarily networking/infrastructure-focused) b
 #### Per-Hook
 
 ```js
-import { useTitleCase } from 'react-title-case';
+import { useTitleCase } from 'use-title-case';
 
 export const YourSnazzyComponent = () => {
   const title = useTitleCase({ overrides: ['TITLE'] });
@@ -75,7 +75,7 @@ export USER_OVERRIDES='["INCorrectly","TITLE"]'
 #### Context Provider
 
 ```js
-import { TitleCaseProvider, useTitleCase } from 'react-title-case';
+import { TitleCaseProvider, useTitleCase } from 'use-title-case';
 
 export const YourSnazzyComponent = () => {
   const title = useTitleCase();
@@ -99,9 +99,9 @@ export const App = () => {
 
 ### Options
 
-| Property      | Type       | Default                                                                                         | Description                                                    |
-| :------------ | :--------- | :---------------------------------------------------------------------------------------------- | :------------------------------------------------------------- |
-| `overrides`   | `string[]` | [See here](https://github.com/checktheroads/react-title-case/blob/main/src/builtInOverrides.ts) | Provide an array of strings that should not be capitalized     |
-| `useBuiltIns` | `boolean`  | `true`                                                                                          | Set to `false` if you don't want to use the default overrides. |
+| Property      | Type       | Default                                                                                       | Description                                                    |
+| :------------ | :--------- | :-------------------------------------------------------------------------------------------- | :------------------------------------------------------------- |
+| `overrides`   | `string[]` | [See here](https://github.com/checktheroads/use-title-case/blob/main/src/builtInOverrides.ts) | Provide an array of strings that should not be capitalized     |
+| `useBuiltIns` | `boolean`  | `true`                                                                                        | Set to `false` if you don't want to use the default overrides. |
 
-![License](https://img.shields.io/github/license/checktheroads/react-title-case?color=%23000&style=for-the-badge)
+![License](https://img.shields.io/github/license/checktheroads/use-title-case?color=%23000&style=for-the-badge)
