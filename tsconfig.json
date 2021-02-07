@@ -11,6 +11,7 @@
     "module": "esnext",
     "outDir": "./dist",
     "target": "esnext",
+    "rootDir": "src",
     "jsx": "react",
     "strict": true,
     "baseUrl": "."
