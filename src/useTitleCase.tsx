@@ -21,5 +21,3 @@ export function useTitleCase(options: UseTitleCaseOptions = DEFAULT_OPTIONS): Us
 
   return useCallback(titleCase, OVERRIDES);
 }
-
-export { builtInOverrides as titleCaseOverrides } from './builtInOverrides';
