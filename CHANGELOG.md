@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## 0.0.4 - 2021-02-08
 
 ### Fixed
+
 - (Probably not) fix hook call error.
 
 ## 0.0.3 - 2021-02-07
