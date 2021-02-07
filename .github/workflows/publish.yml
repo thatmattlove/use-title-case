@@ -16,7 +16,7 @@ jobs:
           node-version: 14
 
       - name: Install Dependencies
-        run: yarn install && yarn add react @types/react
+        run: yarn install
 
       - name: Prepare
         run: yarn build

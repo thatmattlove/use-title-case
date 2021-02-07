@@ -1,11 +1,11 @@
 import * as React from 'react';
-import { createContext, useContext } from 'react';
+import { createContext, useContext, useMemo } from 'react';
 import vercelTitle from 'title';
 import { mergeOptions, DEFAULT_OPTIONS } from './util';
 
 import type { UseTitleCaseOptions } from './types';
 
-const TitleCaseCtx = createContext<UseTitleCaseOptions>(DEFAULT_OPTIONS);
+export const TitleCaseCtx = createContext<UseTitleCaseOptions>(DEFAULT_OPTIONS);
 
 export function useTitleCaseCtx(): UseTitleCaseOptions {
   return useContext<UseTitleCaseOptions>(TitleCaseCtx);
@@ -16,7 +16,9 @@ export const TitleCaseProvider: React.FC<UseTitleCaseOptions> = (
 ) => {
   const { children, ...options } = props;
 
-  return <TitleCaseCtx.Provider value={options}>{children}</TitleCaseCtx.Provider>;
+  const value = useMemo(() => options, [options]);
+
+  return <TitleCaseCtx.Provider value={value}>{children}</TitleCaseCtx.Provider>;
 };
 
 export const TitleCase: React.FC<UseTitleCaseOptions> = (

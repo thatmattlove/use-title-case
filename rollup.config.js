@@ -1,44 +1,51 @@
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
+import external from 'rollup-plugin-peer-deps-external';
 import babel from '@rollup/plugin-babel';
 import pkg from './package.json';
 
 const extensions = ['.js', '.jsx', '.ts', '.tsx'];
 
-const name = 'PaletteByNumbers';
+const name = 'UseTitleCase';
 
-export default {
-  input: './src/index.ts',
+const plugins = [
+  external(),
+  resolve({ extensions }),
+  typescript({ sourceMap: true, importHelpers: true }),
+  commonjs(),
+  babel({
+    extensions,
+    babelHelpers: 'bundled',
+    include: ['src/**/*'],
+  }),
+];
 
-  // Specify here external modules which you don't want to include in your bundle (for instance: 'lodash', 'moment' etc.)
-  // https://rollupjs.org/guide/en/#external
-  external: [],
+const input = './src/index.ts';
 
-  plugins: [
-    typescript(),
-    // Allows node_modules resolution
-    resolve({ extensions }),
-
-    // Allow bundling cjs modules. Rollup doesn't understand cjs
-    commonjs(),
-
-    // Compile TypeScript/JavaScript files
-    babel({
-      extensions,
-      babelHelpers: 'bundled',
-      include: ['src/**/*'],
-    }),
-  ],
-
-  output: [
-    {
+export default [
+  {
+    input,
+    output: {
+      name,
       file: pkg.main,
       format: 'cjs',
+      exports: 'named',
+      sourcemap: true,
     },
-    {
+
+    plugins,
+  },
+  {
+    input,
+    output: {
+      name,
       file: pkg.module,
       format: 'es',
+      exports: 'named',
+      sourcemap: true,
     },
-  ],
-};
+
+    plugins,
+  },
+];

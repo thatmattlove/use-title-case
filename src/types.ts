@@ -1,4 +1,4 @@
-export type UseTitleCaseFn = (title: string) => string;
+export type UseTitleCaseFn = (title: React.ReactNode) => string;
 
 export type UseTitleCaseOptions = {
   overrides?: string[];
