@@ -49,13 +49,11 @@ export const YourSnazzyComponent = () => {
   return (
     <div>
       <h1>
-        <TitleCase>
-          i Am An INCorrectly capitAlized TITLE
-        </TitleCase>
+        <TitleCase>i Am An INCorrectly capitAlized TITLE</TitleCase>
       </h1>
     </div>
-  )
-}
+  );
+};
 // The <h1/ > element's text will be rendered as "I am an Incorrectly Capitalized Title"
 ```
 
