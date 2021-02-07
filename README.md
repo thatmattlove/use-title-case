@@ -34,7 +34,7 @@ export const YourSnazzyComponent = () => {
       <h1>{title('i Am An INCorrectly capitAlized TITLE')}</h1>
     </div>
   );
-}
+};
 // The <h1/ > element's text will be rendered as "I am an Incorrectly Capitalized Title"
 ```
 
@@ -48,14 +48,14 @@ React Title Case comes with some (primarily networking/infrastructure-focused) b
 import { useTitleCase } from 'react-title-case';
 
 export const YourSnazzyComponent = () => {
-  const title = useTitleCase({ overrides: ['TITLE']});
+  const title = useTitleCase({ overrides: ['TITLE'] });
 
   return (
     <div>
       <h1>{title('i Am An INCorrectly capitAlized TITLE')}</h1>
     </div>
   );
-}
+};
 // The <h1/ > element's text will be rendered as "I am an Incorrectly Capitalized TITLE"
 ```
 
@@ -85,15 +85,15 @@ export const YourSnazzyComponent = () => {
       <h1>{title('i Am An INCorrectly capitAlized TITLE')}</h1>
     </div>
   );
-}
+};
 
 export const App = () => {
   return (
     <TitleCaseProvider overrides={['INCorrectly', 'TITLE']}>
       <YourSnazzyComponent />
     </TitleCaseProvider>
-  )
-}
+  );
+};
 // The <h1/ > element's text will be rendered as "I am an INCorrectly Capitalized TITLE"
 ```
 
