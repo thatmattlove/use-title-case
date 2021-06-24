@@ -3,7 +3,7 @@
     <h3><code>useTitleCase()</code></h3>
     <br/>
 
-[![Tests](https://img.shields.io/github/workflow/status/checktheroads/use-title-case/Tests?label=Tests&style=for-the-badge)](https://github.com/checktheroads/use-title-case/actions?query=workflow%3A%Tests%22)
+[![Tests](https://img.shields.io/github/workflow/status/thatmattlove/use-title-case/Tests?label=Tests&style=for-the-badge)](https://github.com/thatmattlove/use-title-case/actions?query=workflow%3A%Tests%22)
 
 [![npm](https://img.shields.io/npm/v/use-title-case?style=for-the-badge)](https://npmjs.com/package/use-title-case)
 
@@ -118,9 +118,9 @@ export const App = () => {
 
 ### Options
 
-| Property      | Type       | Default                                                                                       | Description                                                    |
-| :------------ | :--------- | :-------------------------------------------------------------------------------------------- | :------------------------------------------------------------- |
-| `overrides`   | `string[]` | [See here](https://github.com/checktheroads/use-title-case/blob/main/src/builtInOverrides.ts) | Provide an array of strings that should not be capitalized     |
-| `useBuiltIns` | `boolean`  | `true`                                                                                        | Set to `false` if you don't want to use the default overrides. |
+| Property      | Type       | Default                                                                                      | Description                                                    |
+| :------------ | :--------- | :------------------------------------------------------------------------------------------- | :------------------------------------------------------------- |
+| `overrides`   | `string[]` | [See here](https://github.com/thatmattlove/use-title-case/blob/main/src/builtInOverrides.ts) | Provide an array of strings that should not be capitalized     |
+| `useBuiltIns` | `boolean`  | `true`                                                                                       | Set to `false` if you don't want to use the default overrides. |
 
-![License](https://img.shields.io/github/license/checktheroads/use-title-case?color=%23000&style=for-the-badge)
+![License](https://img.shields.io/github/license/thatmattlove/use-title-case?color=%23000&style=for-the-badge)

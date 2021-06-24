@@ -1,6 +1,6 @@
 {
   "name": "use-title-case",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A React hook to properly capitalize titles using Vercel's title library",
   "types": "dist/index.d.ts",
   "typings": "dist/index.d.ts",
@@ -8,12 +8,12 @@
   "module": "esm/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/checktheroads/use-title-case"
+    "url": "https://github.com/thatmattlove/use-title-case"
   },
   "bugs": {
-    "url": "https://github.com/checktheroads/use-title-case/issues"
+    "url": "https://github.com/thatmattlove/use-title-case/issues"
   },
-  "homepage": "https://github.com/checktheroads/use-title-case#readme",
+  "homepage": "https://github.com/thatmattlove/use-title-case#readme",
   "files": [
     "dist/",
     "esm/"
@@ -41,6 +41,7 @@
     "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "prettier": "^2.2.1",
     "prettier-eslint": "^12.0.0",
     "react": "^17.0.1",
@@ -50,7 +51,6 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "eslint-plugin-react-hooks": "^4.2.0",
     "merge-anything": "^4.0.0",
     "title": "^3.4.2"
   },
