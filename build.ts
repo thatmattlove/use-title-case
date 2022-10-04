@@ -21,14 +21,13 @@ const entryPoints = fs.readdirSync("src").reduce<string[]>((final, each) => {
 }, []);
 
 async function build(format: Exclude<Format, "iife">): Promise<void> {
-  const outExtension = format === "cjs" ? { ".js": ".cjs.js" } : { ".js": ".esm.js" };
+  const outdir = `dist/${format}`;
   const options: BuildOptions = {
     target: ["esnext"],
     format,
     platform: "browser",
     entryPoints,
-    outExtension,
-    outdir: "dist",
+    outdir,
     jsx: "preserve",
     treeShaking: true,
     sourcemap: "inline",

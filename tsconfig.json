@@ -14,7 +14,7 @@
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "./dist",
+    "outDir": "./dist/types",
     "resolveJsonModule": true,
     "rootDir": "src",
     "skipLibCheck": true,

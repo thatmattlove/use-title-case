@@ -4,19 +4,19 @@
   "description": "A React hook to properly capitalize titles using Vercel's title library",
   "type": "module",
   "sideEffects": false,
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "require": "./dist/index.cjs.js",
-      "import": "./dist/index.esm.js",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts"
     },
     "./*": {
-      "require": "./dist/*.cjs.js",
-      "import": "./dist/*.esm.js"
+      "require": "./dist/cjs/*.js",
+      "import": "./dist/esm/*.js"
     }
   },
   "repository": {
