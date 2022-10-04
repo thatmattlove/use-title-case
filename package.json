@@ -54,9 +54,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/**/*.ts",
     "format": "prettier --loglevel warn -c .",
-    "old:build:types": "tsc --emitDeclarationOnly",
-    "old:build:js": "rollup -c",
-    "old:build": "pnpm run build:types && pnpm run build:js",
+    "format:fix": "prettier --loglevel warn -w .",
     "build": "ts-node-esm build.ts && tsc --build",
     "test": "NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest --detectOpenHandles"
   }

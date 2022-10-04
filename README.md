@@ -29,14 +29,14 @@ npm install use-title-case
 ### Hook
 
 ```tsx
-import { useTitleCase } from 'use-title-case';
+import { useTitleCase } from "use-title-case";
 
 export const YourSnazzyComponent = () => {
   const title = useTitleCase();
 
   return (
     <div>
-      <h1>{title('i Am An INCorrectly capitAlized TITLE')}</h1>
+      <h1>{title("i Am An INCorrectly capitAlized TITLE")}</h1>
     </div>
   );
 };
@@ -46,7 +46,7 @@ export const YourSnazzyComponent = () => {
 ### Component
 
 ```tsx
-import { TitleCase } from 'use-title-case';
+import { TitleCase } from "use-title-case";
 
 export const YourSnazzyComponent = () => {
   return (
@@ -67,14 +67,14 @@ React Title Case comes with some (primarily networking/infrastructure-focused) b
 #### Per-Hook
 
 ```tsx
-import { useTitleCase } from 'use-title-case';
+import { useTitleCase } from "use-title-case";
 
 export const YourSnazzyComponent = () => {
-  const title = useTitleCase({ overrides: ['TITLE'] });
+  const title = useTitleCase({ overrides: ["TITLE"] });
 
   return (
     <div>
-      <h1>{title('i Am An INCorrectly capitAlized TITLE')}</h1>
+      <h1>{title("i Am An INCorrectly capitAlized TITLE")}</h1>
     </div>
   );
 };
@@ -97,21 +97,21 @@ export USER_OVERRIDES='["INCorrectly","TITLE"]'
 #### Context Provider
 
 ```tsx
-import { TitleCaseProvider, useTitleCase } from 'use-title-case';
+import { TitleCaseProvider, useTitleCase } from "use-title-case";
 
 export const YourSnazzyComponent = () => {
   const title = useTitleCase();
 
   return (
     <div>
-      <h1>{title('i Am An INCorrectly capitAlized TITLE')}</h1>
+      <h1>{title("i Am An INCorrectly capitAlized TITLE")}</h1>
     </div>
   );
 };
 
 export const App = () => {
   return (
-    <TitleCaseProvider overrides={['INCorrectly', 'TITLE']}>
+    <TitleCaseProvider overrides={["INCorrectly", "TITLE"]}>
       <YourSnazzyComponent />
     </TitleCaseProvider>
   );
