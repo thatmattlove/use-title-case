@@ -11,8 +11,16 @@ export default {
   transform: {
     "^.+\\.tsx?$": [
       "esbuild-jest",
-      { sourcemap: "inline", target: ["esnext"], platform: "browser", jsx: "preserve" },
+      {
+        sourcemap: "inline",
+        target: ["esnext"],
+        platform: "browser",
+        format: "esm",
+      },
     ],
+  },
+  moduleNameMapper: {
+    "^(\\.{1,2}/.*)\\.js$": "$1",
   },
   testPathIgnorePatterns: ["node_modules"],
   passWithNoTests: true,
@@ -20,4 +28,5 @@ export default {
   globals: {
     React,
   },
+  extensionsToTreatAsEsm: [".ts", ".tsx"],
 } as Config;

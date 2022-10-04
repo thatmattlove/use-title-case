@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import vercelTitle from "title";
-import { useTitleCaseCtx } from "./title-case";
-import { mergeOptions, DEFAULT_OPTIONS } from "./util";
+import { useTitleCaseCtx } from "./title-case.js";
+import { mergeOptions, DEFAULT_OPTIONS } from "./util.js";
 
 import type { UseTitleCaseOptions, UseTitleCaseFn } from "./types";
 

@@ -1,4 +1,4 @@
-import { builtInOverrides } from "./built-in-overrides";
+import { builtInOverrides } from "./built-in-overrides.js";
 
 import type { UseTitleCaseOptions, MergedUseTitleCaseOptions } from "./types";
 

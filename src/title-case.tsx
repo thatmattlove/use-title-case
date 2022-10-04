@@ -1,6 +1,6 @@
 import { createContext, useContext, useMemo } from "react";
-import { useTitleCase } from "./use-title-case";
-import { DEFAULT_OPTIONS } from "./util";
+import { useTitleCase } from "./use-title-case.js";
+import { DEFAULT_OPTIONS } from "./util.js";
 
 import type { UseTitleCaseOptions } from "./types";
 
