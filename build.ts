@@ -28,7 +28,6 @@ async function build(format: Exclude<Format, "iife">): Promise<void> {
     platform: "browser",
     entryPoints,
     outdir,
-    jsx: "preserve",
     treeShaking: true,
     sourcemap: "inline",
   };
