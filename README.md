@@ -3,7 +3,7 @@
     <h3><code>useTitleCase()</code></h3>
     <br/>
 
-[![Tests](https://img.shields.io/github/workflow/status/thatmattlove/use-title-case/Tests?label=Tests&style=for-the-badge)](https://github.com/thatmattlove/use-title-case/actions?query=workflow%3A%Tests%22)
+[![Quality](https://img.shields.io/github/workflow/status/thatmattlove/use-title-case/Quality?label=Quality&style=for-the-badge)](https://github.com/thatmattlove/use-title-case/actions?query=workflow%3A%Quality%22)
 
 [![npm](https://img.shields.io/npm/v/use-title-case?style=for-the-badge)](https://npmjs.com/package/use-title-case)
 
@@ -14,6 +14,9 @@ React Title Case is a simple React Hook that provides a callback for [Vercel's t
 ## Installation
 
 ```bash
+# Using pnpm
+pnpm add use-title-case
+
 # Using yarn
 yarn add use-title-case
 
@@ -25,7 +28,7 @@ npm install use-title-case
 
 ### Hook
 
-```js
+```tsx
 import { useTitleCase } from 'use-title-case';
 
 export const YourSnazzyComponent = () => {
@@ -42,7 +45,7 @@ export const YourSnazzyComponent = () => {
 
 ### Component
 
-```js
+```tsx
 import { TitleCase } from 'use-title-case';
 
 export const YourSnazzyComponent = () => {
@@ -63,7 +66,7 @@ React Title Case comes with some (primarily networking/infrastructure-focused) b
 
 #### Per-Hook
 
-```js
+```tsx
 import { useTitleCase } from 'use-title-case';
 
 export const YourSnazzyComponent = () => {
@@ -93,7 +96,7 @@ export USER_OVERRIDES='["INCorrectly","TITLE"]'
 
 #### Context Provider
 
-```js
+```tsx
 import { TitleCaseProvider, useTitleCase } from 'use-title-case';
 
 export const YourSnazzyComponent = () => {

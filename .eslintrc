@@ -6,23 +6,22 @@
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "prettier/@typescript-eslint",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:unicorn/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
-  },
   "parserOptions": {
-    "ecmaVersion": 2020,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "arrowFunctions": true
-    },
     "project": "./tsconfig.json"
   },
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "jest.config.[jt]s",
+    "*.spec.ts",
+    "*.test.ts",
+    "*.test.tsx",
+    "build.[jt]s"
+  ],
   "plugins": ["@typescript-eslint", "prettier"],
   "settings": {
     "import/parsers": {
@@ -33,23 +32,16 @@
     }
   },
   "rules": {
-    "@typescript-eslint/no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars-experimental": "error",
-    "no-unused-vars": "off",
-
     "comma-dangle": ["error", "always-multiline"],
-    "global-require": "off",
-    "import/no-dynamic-require": "off",
-    "import/prefer-default-export": "off",
-    "@typescript-eslint/no-inferrable-types": "off",
-    "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-var-requires": "off",
-    "@typescript-eslint/no-non-null-assertion": "off",
-    "@typescript-eslint/no-namespace": "off",
-    "@typescript-eslint/no-empty-interface": [
+    "unicorn/no-array-reduce": "off",
+    "unicorn/prevent-abbreviations": [
       "error",
       {
-        "allowSingleExtends": true
+        "replacements": {
+          "fn": false,
+          "ctx": false,
+          "env": false
+        }
       }
     ]
   }

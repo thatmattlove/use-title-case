@@ -1,3 +1,3 @@
-export { useTitleCase } from './useTitleCase';
-export { TitleCase, TitleCaseProvider } from './TitleCase';
-export { builtInOverrides } from './builtInOverrides';
+export { useTitleCase } from "./use-title-case";
+export { TitleCase, TitleCaseProvider } from "./title-case";
+export { builtInOverrides } from "./built-in-overrides";

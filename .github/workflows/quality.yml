@@ -1,11 +1,12 @@
-name: Publish to NPM
-on:
-  release:
-    types: [published]
+name: Quality
+on: [push, pull_request]
 
 jobs:
-  publish:
+  quality:
+    name: Quality
+
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
@@ -21,10 +22,14 @@ jobs:
           version: latest
           run_install: true
 
-      - name: Build
-        run: pnpm run build
+      - name: Formatting
+        run: pnpm run format
 
-      - name: NPM Publish
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+      - name: Lint
+        run: pnpm run lint
+
+      - name: Typing
+        run: pnpm run typecheck
+
+      - name: Unit Tests
+        run: pnpm run test
