@@ -1,10 +1,16 @@
 {
   "name": "use-title-case",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A React hook to properly capitalize titles using Vercel's title library",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
   "type": "module",
   "repository": {
     "type": "git",
