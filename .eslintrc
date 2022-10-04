@@ -40,7 +40,8 @@
         "replacements": {
           "fn": false,
           "ctx": false,
-          "env": false
+          "env": false,
+          "props": false
         }
       }
     ]

@@ -1,4 +1,3 @@
-import * as React from "react";
 import { createContext, useContext, useMemo } from "react";
 import { useTitleCase } from "./use-title-case";
 import { DEFAULT_OPTIONS } from "./util";

@@ -1,17 +1,24 @@
 {
   "name": "use-title-case",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A React hook to properly capitalize titles using Vercel's title library",
-  "main": "dist/index.cjs",
-  "module": "dist/index.mjs",
+  "type": "module",
+  "sideEffects": false,
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "exports": {
+    "./package.json": "./package.json",
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "require": "./dist/index.cjs.js",
+      "import": "./dist/index.esm.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./*": {
+      "require": "./dist/*.cjs.js",
+      "import": "./dist/*.esm.js"
     }
   },
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/thatmattlove/use-title-case"
@@ -61,7 +68,7 @@
     "lint": "eslint src/**/*.ts",
     "format": "prettier --loglevel warn -c .",
     "format:fix": "prettier --loglevel warn -w .",
-    "build": "ts-node-esm build.ts && tsc --build",
+    "build": "ts-node-esm build.ts && tsc --emitDeclarationOnly",
     "test": "NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest --detectOpenHandles"
   }
 }

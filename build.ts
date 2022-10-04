@@ -4,20 +4,33 @@ import esbuild from "esbuild";
 
 import type { Format, BuildOptions } from "esbuild";
 
-const entryPoints = fs
-  .readdirSync("src")
-  .filter(f => !f.endsWith(".test.ts"))
-  .map(f => path.resolve("src", f));
+const extensionPatterns = [
+  // Standard .ts & .tsx files
+  /^.+\.test\.tsx?$/gi,
+
+  // Type definitions
+  /^.+\.d\.ts$/gi,
+];
+
+const entryPoints = fs.readdirSync("src").reduce<string[]>((final, each) => {
+  const ignore = extensionPatterns.map(p => p.test(each)).includes(true);
+  if (!ignore) {
+    final.push(path.resolve("src", each));
+  }
+  return final;
+}, []);
 
 async function build(format: Exclude<Format, "iife">): Promise<void> {
-  const outExtension = format === "cjs" ? { ".js": ".cjs" } : { ".js": ".mjs" };
+  const outExtension = format === "cjs" ? { ".js": ".cjs.js" } : { ".js": ".esm.js" };
   const options: BuildOptions = {
     target: ["esnext"],
     format,
-    platform: "node",
+    platform: "browser",
     entryPoints,
     outExtension,
     outdir: "dist",
+    jsx: "preserve",
+    treeShaking: true,
     sourcemap: "inline",
   };
   const result = await esbuild.build(options);
